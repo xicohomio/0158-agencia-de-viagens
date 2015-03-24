@@ -9,6 +9,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+<script src="js/datedropper.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/datedropper.css">  
+
+
     <title>0158-agencia de viagens</title>
 
     <!-- Bootstrap Core CSS -->
@@ -27,6 +31,11 @@
 </head>
 
 <body>
+
+    <input type="text" id="departure" />
+
+        <script>$( "#departure" ).dateDropper();</script>
+
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -132,6 +141,20 @@
     <input id="data" type="data" name="data" value=""><br>
     <input type="submit">
     </form> 
+<script>$( "#departure" ).dateDropper();</script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+
+
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip({ "show": 500, "hide": 100 })
+})
+</script>
+
 
     </div>
 
@@ -155,6 +178,26 @@
         email: true,
       },
     },
+
+    messages:{
+            nome:'o nome é obrigatorio',
+            password :{
+                required: "password obrigatorio",
+            },
+            password_confirm: {
+                required: "repeat your password",
+            minlength: jQuery.validator.format("insira pelo menos {0} characters"),
+            equalTo: "devem ser iguais"
+        },
+            omeuemail: {
+                required:"please enter a valid email adress",
+                omeuemail: "please enter a valid email adress",
+            },
+
+        }       
+        }
+
+            );
 
 
 
